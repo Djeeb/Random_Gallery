@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS Grid Image Gallery!</title>
+    <title>Random Gallery</title>
   </head>
 
   <body>
@@ -48,6 +48,38 @@
       }
 
       .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100px);
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
+      }
+
+      .item {
+        overflow: hidden;
+      }
+
+      .item.v2 {
+        grid-row: span 2;
+      }
+
+      .item.v3 {
+        grid-row: span 3;
+      }
+
+      .item.v4 {
+        grid-row: span 4;
+      }
+
+      .item.h2 {
+        grid-column: span 2;
+      }
+
+      .item.h3 {
+        grid-column: span 3;
+      }
+
+      .item.h4 {
+        grid-column: span 4;
       }
 
       .overlay {
@@ -100,6 +132,45 @@
       const digits = Array.from({ length: 50 }, () => [
         randomNumber(4),
         randomNumber(4),
+      ]).concat([
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
       ]);
       console.log(digits);
 
